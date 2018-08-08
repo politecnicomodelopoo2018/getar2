@@ -1,4 +1,4 @@
-from TP_Python_SQL.db import DB
+from db import DB
 
 class Producto(object):
     id_Producto = None
@@ -13,4 +13,4 @@ class Producto(object):
         DB.run("Delete from Producto where id_Producto = (" + str(self.id_Producto) + ");")
 
     def Modificar(self):
-        DB.run("UPDATE Producto SET nombre = '%s', precio = %i, Categoria_idtable1 = %i WHERE id_Producto = %i;" % (self.nombre, self.precio, self.categoria,self.id_Producto))
+        DB.run("UPDATE Producto SET nombre = '%s', precio = %i, Categoria_idtable1 = %i WHERE id_Producto = %i;" % (self.nombre_Producto, self.precio, self.categoria,self.id_Producto))
