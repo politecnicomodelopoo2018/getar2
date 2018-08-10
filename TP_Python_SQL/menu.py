@@ -26,7 +26,6 @@ while(True):
             p.nombre = nombre_persona
             p.apellido = apellido_persona
             p.Insertar()
-            print ("Persona Agregada")
             os.system('clear')
         if int(opcion_persona) == 2:
             os.system('clear')
@@ -79,8 +78,56 @@ while(True):
             c = Categoria()
             c.id_Categoria = idCategoria
             c.nombre_Categoria = categoria_nombre
-            c.Modificar()
+            c.Modificar() #Error Desconocido
             print("Categoria modificada")
+    if int(opcion) == 3:
+        os.system('clear')
+        print("Opciones de Producto")
+        print("1)Agregar Producto")
+        print("2)Borrar Producto")
+        print("3)Actualizar Producto")
+        opcion_producto = int(input("Elija una opcion: "))
+        if opcion_producto == 1:
+            os.system('clear')
+            print("Agregar Producto")
+            producto_nombre = input("Ingrese nombre: ")
+            producto_precio = int(input("INgrese precio: "))
+            producto_categoria = int(input("INgrese categoria: "))
+            pr = Producto()
+            pr.id_Producto = "NULL"
+            pr.nombre_Producto = producto_nombre
+            pr.precio = producto_precio
+            pr.categoria = producto_categoria
+            pr.Insertar()
+            os.system('clear')
+        if opcion_producto == 2:
+            os.system('clear')
+            print("Borrar Producto")
+            idProducto = int(input("Ingrese ID: "))
+            pr = Producto()
+            pr.id_Producto = idProducto
+            pr.Borrar()
+            print("Producto Borrado")
+        if opcion_producto == 3:
+            os.system('clear')
+            print("Modificar Producto")
+            idProducto = int(input("Ingrese ID: "))
+            producto_nombre = input("Ingrese nombre: ")
+            producto_precio = int(input("Ingrese precio: "))
+            producto_categoria = int(input("Ingrese categoria: "))
+            pr = Producto()
+            pr.id_Producto = idProducto
+            pr.nombre_Producto = producto_nombre
+            pr.precio = producto_precio
+            pr.categoria = producto_categoria
+            pr.Modificar()
+            os.system('clear')
+
+
+
+
+
+
 
 
 
