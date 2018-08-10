@@ -12,3 +12,5 @@ class Categoria(object):
 
     def Modificar(self):
         DB.run("UPDATE Persona SET nombre_Categoria = '%s' WHERE id_Categoria = %i;" % (self.nombre_Categoria, self.id_Categoria))
+
+
