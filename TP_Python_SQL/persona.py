@@ -10,6 +10,7 @@ class Persona(object):
         DB.run("insert into Persona(dni,nombre,apellido) Values(" + str(self.dni) + ", '" + self.nombre + "', '" + self.apellido + "');")
 
     def Borrar(self):
+        DB.run("Delete from Compra where Persona_dni = (" + str(self.dni) + ")")
         DB.run("Delete from Persona where dni = (" + str(self.dni) + ");")
 
     def Modificar(self):
