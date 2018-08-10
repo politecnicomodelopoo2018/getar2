@@ -2,6 +2,7 @@ import os
 from categoria import Categoria
 from persona import Persona
 from producto import Producto
+from compra import Compra
 
 while(True):
     print("Bienvenido al Supermercado de la esquina")
@@ -78,8 +79,8 @@ while(True):
             c = Categoria()
             c.id_Categoria = idCategoria
             c.nombre_Categoria = categoria_nombre
-            c.Modificar() #Error Desconocido
-            print("Categoria modificada")
+            c.Modificar()
+            os.system('clear')
     if int(opcion) == 3:
         os.system('clear')
         print("Opciones de Producto")
@@ -107,7 +108,7 @@ while(True):
             pr = Producto()
             pr.id_Producto = idProducto
             pr.Borrar()
-            print("Producto Borrado")
+            os.system('clear')
         if opcion_producto == 3:
             os.system('clear')
             print("Modificar Producto")
@@ -122,13 +123,30 @@ while(True):
             pr.categoria = producto_categoria
             pr.Modificar()
             os.system('clear')
-
-
-
-
-
-
-
-
-
+    if int(opcion) == 4:
+        os.system('clear')
+        print("Opciones de Compra")
+        print("1)Agregar Compra")
+        print("2)Borrar Compra")
+        opcion_compra = int(input("Elija una opcion: "))
+        if opcion_compra == 1:
+            os.system('clear')
+            print("Agregar Compra")
+            DNIComprador = int(input("Ingrese el DNI del comprador: "))
+            idProducto_comprar = int(input("Ingrese el ID del producto a comprar: "))
+            co = Compra()
+            co.dni = DNIComprador
+            co.id = idProducto_comprar
+            co.Insertar()
+            os.system('clear')
+        if opcion_compra == 2:
+            os.system('clear')
+            print("Agregar Compra")
+            DNIComprador = int(input("Ingrese el DNI del comprador: "))
+            idProducto_comprar = int(input("Ingrese el ID del producto a comprar: "))
+            co = Compra()
+            co.dni = DNIComprador
+            co.id = idProducto_comprar
+            co.Borrar()
+            os.system('clear')
 
