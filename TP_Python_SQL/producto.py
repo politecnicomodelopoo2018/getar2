@@ -10,6 +10,7 @@ class Producto(object):
         DB.run("insert into Producto(id_Producto,nombre,precio,Categoria_idtable1) Values(" + str(self.id_Producto) + ", '" + self.nombre_Producto + "', " +str(self.precio) + "," + str(self.categoria) + ");")
 
     def Borrar(self):
+        DB.run("Delete from Compra where Producto_id_Producto = (" + str(self.id_Producto) + ");")
         DB.run("Delete from Producto where id_Producto = (" + str(self.id_Producto) + ");")
 
     def Modificar(self):
