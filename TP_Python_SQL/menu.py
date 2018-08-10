@@ -67,6 +67,20 @@ while(True):
             os.system('clear')
             print("Borrar Categoria")
             idCategoria = int(input("Ingrese ID: "))
+            c = Categoria()
+            c.id_Categoria = idCategoria
+            c.Borrar()
+            os.system('clear')
+        if opcion_categoria == 3:
+            os.system('clear')
+            print("Modificar Categoria")
+            idCategoria = int(input("Ingrese ID: "))
+            categoria_nombre = input("Ingrese nuevo nombre: ")
+            c = Categoria()
+            c.id_Categoria = idCategoria
+            c.nombre_Categoria = categoria_nombre
+            c.Modificar()
+            print("Categoria modificada")
 
 
 
