@@ -92,8 +92,8 @@ while(True):
             os.system('clear')
             print("Agregar Producto")
             producto_nombre = input("Ingrese nombre: ")
-            producto_precio = int(input("INgrese precio: "))
-            producto_categoria = int(input("INgrese categoria: "))
+            producto_precio = int(input("Ingrese precio: "))
+            producto_categoria = int(input("Ingrese categoria: "))
             pr = Producto()
             pr.id_Producto = "NULL"
             pr.nombre_Producto = producto_nombre
