@@ -5,7 +5,7 @@ from producto import Producto
 from compra import Compra
 
 while(True):
-    print("Bienvenido al Supermercado de la esquina")
+    print("Bienvenido al Supermercado")
     print("1)Operaciones de Persona")
     print("2)Operaciones de Categoria")
     print("3)Operaciones de Producto")
